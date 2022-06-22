@@ -3,7 +3,7 @@ var bodyparser = require('body-parser')
 var mongoose = require('mongoose')
 var router = require('./route')
 
-mongoose.connect("mongodb+srv://fenilbabariya:410mongo@cluster0.ttnszx3.mongodb.net/student?retryWrites=true&w=majority").then(()=>{
+mongoose.connect("mongodb+srv://fenilbabariya:410mongo@cluster0.ttnszx3.mongodb.net/movie?retryWrites=true&w=majority").then(()=>{
     console.log("DB Connected");
 
     var app = express();
