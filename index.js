@@ -3,10 +3,18 @@ var bodyparser = require('body-parser')
 var mongoose = require('mongoose')
 var router = require('./route')
 
-var app = express();
-app.use('/api',router);
+mongoose.connect("mongodb+srv://fenilbabariya:410mongo@cluster0.ttnszx3.mongodb.net/student?retryWrites=true&w=majority").then(()=>{
+    console.log("DB Connected");
 
-// app.listen(3000,()=>{
-app.listen(process.env.PORT,()=>{
+    var app = express();
+    app.use(bodyparser.urlencoded({extended:false}))
+    app.use(express.json())
+    app.use('/api',router);
+
+    app.listen(process.env.PORT || 3000,()=>{
     console.log("server started");
+    })
+
+}).catch((err)=>{
+    console.log(err)
 })
