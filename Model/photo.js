@@ -8,4 +8,4 @@ var photoSchema = mongoose.Schema({
     thumbnailUrl:String
 })
 
-module.exports = mongoose.model("photo",movieSchema);
+module.exports = mongoose.model("photo",photoSchema);
