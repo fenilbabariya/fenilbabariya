@@ -1,6 +1,6 @@
 var mongoose = require('mongoose');
 
-var movieSchema = mongoose.Schema({
+var photoSchema = mongoose.Schema({
     albumId:Number,
     id:Number,
     title:String,
@@ -8,4 +8,4 @@ var movieSchema = mongoose.Schema({
     thumbnailUrl:String
 })
 
-module.exports = mongoose.model("movie",movieSchema);
+module.exports = mongoose.model("photo",movieSchema);
